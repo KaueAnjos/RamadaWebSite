@@ -1,0 +1,159 @@
+:root {
+    --dark1: #292929ff;
+    --dark2: rgb(49, 49, 49);
+    --light: #fff;
+    --color1: #ed1b2aff;
+    --color2: #9b0318ff;
+    --background: linear-gradient(145deg, #292929ff, rgb(53, 53, 53));
+}
+
+/* Content Texts and icons */
+.home {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--background);
+    padding: 0 70px 0px 70px;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+}
+
+.content p.welcome-text,
+.content p.about-text{
+    font-size: 22px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: var(--light);
+    line-height: 1;
+}
+
+.content h1 .colorful-text {
+    color: var(--color1);
+}
+
+.presentation-content{
+    margin-bottom: 100px;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: transparent;
+    margin-left: 20px;
+}
+
+.social-icons a:first-child {
+    margin-left: 0;
+}
+
+.social-icons div {
+    background-color: var(--dark2);
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-icons div i {
+    color: var(--color1);
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.social-icons div:hover i {
+    color: var(--color2);
+}
+
+.social-icons div:active{
+    transform: scale(0.9);
+}
+
+.social-share span{
+    text-transform: uppercase;
+}
+
+/* Animated text */
+
+.content h1 div.animate-text{
+    width: var(--textWidth);
+    display: inline-block;
+}
+
+.content h1 div.animate-text p{
+    overflow: hidden;
+    display: inline-flex;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    animation: typeWriter 3.5s linear infinite;
+    opacity: 0;
+    display: none;
+}
+
+.content h1 div.animate-text p.visible{
+    display: flex;
+    opacity: 1;
+}
+
+.content h1 div.animate-text p::after {
+    content: "";
+    position: absolute;
+    top: 13%;
+    right: 0;
+    width: 2px;
+    height: 80%;
+    background-color: var(--light);
+    transform: translate(-50%);
+    animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes typeWriter {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    75% {
+        width: 0;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Home Responsive */
+
+

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+:root {
+    --dark: #292929ff;
+    --light: #fff;
+    --color1: #ed1b2aff;
+    --color2: #9b0318ff;
+}
+
+header nav {
+    height: 70px;
+    width: 100%;
+    background-color: var(--dark);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    position: absolute;
+    margin: 0;
+    margin-right: 75px;
+    right: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li:not(nav ul li:first-child) {
+    margin-left: 15px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--light);
+    transition: 0.5s;
+}
+
+nav ul a:hover {
+    color: var(--color1);
+}
+
+nav img {
+    position: absolute;
+    width: 90px;
+    margin-left: 50px;
+    cursor: pointer;
+}
