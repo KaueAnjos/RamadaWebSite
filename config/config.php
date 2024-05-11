@@ -1,7 +1,7 @@
 <?php
 
 // path site
-define('INCLUDE_PATH', 'http://localhost/blogKR/');
+define('INCLUDE_PATH', 'http://localhost/ramada/');
 
 define('HOST', 'localhost');
 define('USERNAME', 'root');

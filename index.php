@@ -13,14 +13,15 @@ require_once 'config/config.php';
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-d0s9L3Dk3rA9rH25Kg5kfLQCgkObV6aPdXHN5c2eg+fpQpg4brd7HzsPU8eUQvL2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.5/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>assets/css/navbar-style.css" />
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>assets/css/home-style.css" />
-    <title>Ramada WebSite</title>
 </head>
 
 <body>
-    <?php include 'include/navbar.php';
+    <?php 
+    include 'include/navbar.php';
 
     $route = (isset($_GET['url'])) ? $_GET['url'] : 'home';
     $pagesDir = 'pages/';

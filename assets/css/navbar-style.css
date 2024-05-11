@@ -9,16 +9,19 @@
     --light: #fff;
     --color1: #ed1b2aff;
     --color2: #9b0318ff;
+    --navbarGradient: linear-gradient(145deg, #292929ff, rgb(53, 53, 53));
 }
 
 header nav {
     height: 70px;
     width: 100%;
-    background-color: var(--dark);
+    background: transparent;
     display: flex;
     text-align: center;
     align-items: center;
     text-transform: uppercase;
+    position: fixed;
+    z-index: 999;
 }
 
 nav ul {
@@ -37,6 +40,10 @@ nav ul li:not(nav ul li:first-child) {
     margin-left: 15px;
 }
 
+nav ul li:first-child a.active{
+    color: var(--color1);
+}
+
 nav ul a {
     text-decoration: none;
     color: var(--light);
@@ -47,9 +54,40 @@ nav ul a:hover {
     color: var(--color1);
 }
 
+
+
 nav img {
     position: absolute;
     width: 90px;
     margin-left: 50px;
     cursor: pointer;
+}
+
+.active{
+    color: var(--color1);
+}
+
+/* gear */
+
+.gear a i{
+    color: var(--color1);
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.gear a i:hover{
+    color: var(--color2);
+    transition: 0.5s;
+    cursor: pointer;
+    animation: loading 2s linear infinite;
+}
+
+/* Animation rotate gear */
+@keyframes loading {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
